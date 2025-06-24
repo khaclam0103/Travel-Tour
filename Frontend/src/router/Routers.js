@@ -20,6 +20,8 @@ const Routers = () => {
         <Route path='/register' element={<Register />} />
         <Route path='/thank-you' element={<ThankYou />} />
         <Route path='/tours/search' element={<SearchResultList />} />
+        {/* Chuyển hướng tất cả các route không khớp về trang chủ */}
+        <Route path='*' element={<Navigate to='/home' replace />} />
     </Routes>
   )
 }
